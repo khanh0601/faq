@@ -1,0 +1,25 @@
+<!--
+    templateType: global_partial
+    isAvailableForNewContent: false
+-->
+<!-- Begin partial -->
+<section class="header">
+    {% module "Townwifi-HeaderTop" path="/Townwifi/modules/common/Townwifi-HeaderTop", label="Townwifi-HeaderTop" %}
+    {% module "Townwifi-Header" path="/Townwifi/modules/common/Townwifi-Header", label="Townwifi-Header" %}
+    {% module "Townwifi-HeaderNavigation" path="/Townwifi/modules/common/Townwifi-HeaderNavigation", label="Townwifi-HeaderNavigation" %}
+    {% module "Townwifi-Css" path="/Townwifi/modules/common/Townwifi-Css", label="Townwifi-Css" %}
+</section>
+<style>
+    .header{
+        position: fixed;
+         z-index: 10000;
+         width: 100%;
+         top: 0;
+    }
+    @media screen and (max-width:767px) {
+        .header{
+            position: unset;
+        }
+    }
+</style>
+    <!-- End partial -->
