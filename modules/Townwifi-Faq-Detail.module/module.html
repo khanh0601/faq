@@ -14,7 +14,7 @@
         <div class="faq__detail__post__info-right">
             <div class="faq__detail__post__info-date">No：{{ post[7] }}</div>
         <div class="faq__detail__post__info-date pc ">公開日時：{{ add_hours(post.hs_created_at, 9) }}</div>
-        <div class="faq__detail__post__info-date"> 更新日時：{{ post.updated_at | datetimeformat('%Y-%m-%d %H:%M:%S')}}</div>
+        <div class="faq__detail__post__info-date"> 更新日時：{{ post.updated_at | datetimeformat('%Y-%m-%d')}}</div>
         <a href="/print/faq?name={{no}}" target="_blank" class="faq__detail__post__info-print __link pc"> 印刷</a>
         </div>
 

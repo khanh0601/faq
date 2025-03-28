@@ -521,7 +521,13 @@ font-size: 1.204rem;
         $(".detail__select.detail__select_child1").removeClass('active')
     })
     $(".detail__select_child1 .detail__select__option").on('click', function(){
-        var value= type + data_type + $(this).attr('data-type')
+        if ($(this).attr('data-type')=='3'){
+            var value= type + data_type + $(this).attr('data-type')
+        }else{
+            var value= data_type + $(this).attr('data-type')
+
+        }
+        // var value= type + data_type + $(this).attr('data-type')
         $(".detail__select_child1 .detail__select__option").toggleClass('remove')
 
         $(this).toggleClass("active").removeClass("remove")

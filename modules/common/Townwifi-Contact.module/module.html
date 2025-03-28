@@ -3,6 +3,7 @@
 {%set posts=hubdb_table_rows('102743924','&no='~no)%}
 {% set post= posts[0] %}
     {% set access_value = post[10] if post[10] else 0 %}
+    <p>{{}}</p>
 <div class="faq__contact">
     <div class="faq__contact-title active">{{module.text_title}}</div>
     <div class="faq__contact-title comment">{{module.text_title_active}}</div>
@@ -71,7 +72,7 @@
 let access = {{ access_value }} + 1;
 function postDataToApi(postData) {
     $.ajax({
-        url: 'https://sites.vision/_hcms/api/comment', // Thay bằng URL Serverless Function của bạn
+        url: 'https://faq.townwifi.com/_hcms/api/comment', // Thay bằng URL Serverless Function của bạn
         type: 'POST',
         contentType: 'application/json', // Định dạng nội dung gửi
         data: JSON.stringify(postData), // Dữ liệu POST
@@ -83,7 +84,7 @@ function postDataToApi(postData) {
 }
 function updateDataToApi(postData) {
     $.ajax({
-        url: 'https://sites.vision/_hcms/api/faqs/update', // Thay bằng URL Serverless Function của bạn
+        url: 'https://faq.townwifi.com/_hcms/api/faqs/update', // Thay bằng URL Serverless Function của bạn
         type: 'PATCH',
         contentType: 'application/json', // Định dạng nội dung gửi
         data: JSON.stringify(postData), // Dữ liệu POST
